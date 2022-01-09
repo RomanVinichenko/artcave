@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -10,7 +12,9 @@
     <title>Artcave</title>
     <link rel="stylesheet" href="css/style.min.css"/>
 </head>
+
 <body>
+
 <header class="header">
     <div class="container">
         <nav class="menu">
@@ -18,7 +22,11 @@
                 <img class="logo__img" src="images/logo.svg" alt="Logo"/>
             </a>
             <form class="menu__search" action="">
-                <input class="menu__input-search" type="search" name="menu-search" placeholder="Search items, collections, and accounts..."
+                <input
+                        class="menu__input-search"
+                        type="search"
+                        name="menu-search"
+                        placeholder="Search items, collections, and accounts..."
                 />
                 <input class="menu__input-submit" type="submit" name="menu-submit" value=""/>
             </form>
@@ -36,7 +44,7 @@
                     <a class="menu__link" href="#">FAQ</a>
                 </li>
                 <li class="menu__item">
-                    <a class="menu__link" href="blog.html">Blog</a>
+                    <a class="menu__link" href="#">Blog</a>
                 </li>
             </ul>
             <div class="menu__button">
@@ -48,7 +56,78 @@
         </nav>
     </div>
 </header>
-<main class="main"></main>
+
+<main class="main">
+    <section class="blog">
+        <div class="container container--sm">
+            <h1 class="title">
+                Blog
+            </h1>
+            <div class="blog__story" style="background-image: url('images/pencil.jpg')">
+                <div class="blog__content">
+                    <span class="blog__date">20 June 2020</span>
+                    <h2 class="blog__naming">Imagine and Create</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been
+                        the
+                        industry's
+                        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                        scrambled it
+                        to </p>
+                    <a class="blog__link" href="#">
+                        Learn more
+                        <svg class="blog__arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.75 12H20.25" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M13.5 5.25L20.25 12L13.5 18.75" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="blog__stories">
+                <div class="blog__story" style="background-image: url('images/grafiti.jpg')">
+                    <div class="blog__content">
+                        <span class="blog__date">20 June 2020</span>
+                        <h2 class="blog__naming updates__naming--small">Imagine and Create</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has
+                            been
+                            the
+                            industry's
+                            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                            scrambled it
+                            to </p>
+                        <a class="blog__link" href="#">
+                            Learn more
+                            <svg class="blog__arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.75 12H20.25" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M13.5 5.25L20.25 12L13.5 18.75" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+
+                        </a>
+                    </div>
+                </div>
+                <div class="blog__story" style="background-image: url('images/teacher.jpg')">
+                    <div class="blog__content">
+                        <span class="blog__date">20 June 2020</span>
+                        <h2 class="blog__naming updates__naming--small">Imagine and Create</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has
+                            been
+                            the
+                            industry's
+                            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                            scrambled it
+                            to </p>
+                        <a class="blog__link" href="#">
+                            Learn more
+                            <svg class="blog__arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.75 12H20.25" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M13.5 5.25L20.25 12L13.5 18.75" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
 
 <footer class="footer">
     <div class="footer__top">
@@ -71,7 +150,7 @@
                         <a class="menu__link" href="#">FAQ</a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link" href="blog.html">Blog</a>
+                        <a class="menu__link" href="#">Blog</a>
                     </li>
                 </ul>
                 <div class="menu__button">
@@ -122,6 +201,9 @@
         </div>
     </div>
 </footer>
+
 <script src="js/main.js"></script>
+
 </body>
+
 </html>

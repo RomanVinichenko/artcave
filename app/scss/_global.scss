@@ -1,0 +1,152 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: $gray-black;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 16px;
+  max-width: 1824px;
+
+  &--sm {
+    max-width: 1488px;
+  }
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+  min-height: 48px;
+  outline: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  color: $white;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.button__primary {
+  background-color: $primary;
+
+  &:focus {
+    background-color: #b429e9;
+  }
+
+  &:hover {
+    background-color: #c441f5;
+  }
+
+  &:disabled {
+    color: $gray-dark;
+    background-color: $gray-light;
+    cursor: url("../images/disabled.svg"), auto;
+  }
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+
+  &__burger {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    position: relative;
+    font-weight: 600;
+    color: $black;
+    transition: color 0.2s;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -28px;
+      width: 100%;
+      height: 4px;
+      border-radius: 0 0 4px 4px;
+      background-color: transparent;
+      transition: background-color 0.2s;
+    }
+
+    &:not(:last-child) {
+      margin-right: 48px;
+    }
+
+    &:hover {
+      color: $secondary;
+
+      &::after {
+        background-color: $secondary;
+      }
+    }
+  }
+
+  &__search {
+    position: relative;
+    width: 100%;
+    height: 48px;
+    max-width: 576px;
+  }
+
+  &__input-search {
+    padding: 0 12px 0 48px;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: 1px solid $gray-light;
+    border-radius: 8px;
+    color: $black;
+
+    &::placeholder {
+      color: $gray-dark;
+    }
+  }
+
+  &__input-submit {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    border: none;
+    background-image: url("../images/zoom.svg");
+    background-color: transparent;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+}
+
+.title {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 56px;
+  text-align: center;
+  color: $black;
+}
