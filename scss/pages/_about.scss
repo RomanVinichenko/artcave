@@ -1,0 +1,261 @@
+.about {
+  padding: 160px 0 80px;
+
+  &__text {
+    margin: 0 auto 72px;
+    max-width: 575px;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+  }
+
+  &__img {
+    margin: 0 auto;
+  }
+
+  &__main {
+    z-index: 0;
+    background-image: url("../images/abstract.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+.team {
+  padding: 80px 0;
+
+  &__items {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item {
+    max-width: 272px;
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-right: 32px;
+    }
+  }
+
+  &__img {
+    margin-bottom: 16px;
+    border-radius: 8px;
+  }
+
+  &__name {
+    margin-bottom: 8px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  &__position {
+    margin-bottom: 16px;
+  }
+
+  &__descr {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.statistics {
+  padding: 80px 0;
+
+  &__items {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 376px;
+    max-width: 376px;
+    border-radius: 16px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    text-align: center;
+    background-image: linear-gradient(131.83deg, #fffafa 0%, #fff7f7 99.21%);
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -2px;
+      right: -2px;
+      top: -2px;
+      bottom: -2px;
+      z-index: -1;
+      border-radius: 18px;
+      background-image: linear-gradient(312.25deg, #ffc4bc 0%, rgba(255, 255, 255, 0) 66.19%);
+    }
+
+    &:not(:last-child) {
+      margin-right: 28px;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 296px;
+    max-width: 296px;
+    border-radius: 14px;
+    box-shadow: 0 40px 80px #fbe4e0;
+    background-color: $white;
+  }
+
+  &__name {
+    margin-bottom: 16px;
+    font-size: 64px;
+    line-height: 72px;
+    letter-spacing: -0.01em;
+  }
+
+  &__descr {
+    color: #62564d;
+  }
+}
+
+.community {
+  padding: 80px 0 160px;
+
+  &__items {
+    display: flex;
+    justify-content: center;
+
+    &:not(:last-child) {
+      margin-right: 32px;
+    }
+  }
+
+  &__item {
+    min-height: 272px;
+    max-width: 272px;
+  }
+
+  &__wrap {
+    min-height: 215px;
+    max-width: 215px;
+  }
+
+  &__img {
+    margin-bottom: 16px;
+    width: 56px;
+    height: 56px;
+  }
+
+  &__title {
+    margin-bottom: 32px;
+  }
+
+  &__text {
+    margin: 0 auto;
+    margin-bottom: 64px;
+    max-width: 544px;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    color: $gray-black;
+  }
+
+  &__descr {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.01em;
+    color: $secondary;
+  }
+}
+
+.company {
+  padding: 80px 0;
+
+  &__text {
+    margin: 0 auto 64px;
+    max-width: 880px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 880px;
+
+    &:not(:last-child) {
+      margin-bottom: 96px;
+    }
+  }
+
+  &__box {
+    max-width: 424px;
+  }
+
+  &__name {
+    margin-bottom: 32px;
+    text-align: left;
+  }
+
+  &__item--circle {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: -152px;
+      bottom: -80px;
+      z-index: 3;
+      width: 272px;
+      height: 272px;
+      border-radius: 24px;
+      background-color: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(13px);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: -184px;
+      bottom: 80px;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background-color: $primary;
+    }
+  }
+
+  &__item--square {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -152px;
+      bottom: -80px;
+      z-index: 2;
+      width: 272px;
+      height: 272px;
+      border-radius: 24px;
+      background-color: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(13px);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: -184px;
+      bottom: 70px;
+      width: 120px;
+      height: 120px;
+      border-radius: 8px;
+      background: $secondary;
+    }
+  }
+}

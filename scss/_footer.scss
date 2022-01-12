@@ -52,10 +52,6 @@
     &:hover {
       background-color: $gray-light;
     }
-
-    @include r($md) {
-      padding: 12px;
-    }
   }
 
   &__doc {

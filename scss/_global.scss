@@ -23,7 +23,7 @@ body {
   max-width: 1824px;
 
   &--sm {
-    max-width: 1488px;
+    max-width: 1520px;
   }
 }
 
@@ -144,9 +144,25 @@ body {
 }
 
 .title {
+  margin-bottom: 64px;
   font-weight: 600;
   font-size: 48px;
   line-height: 56px;
   text-align: center;
   color: $black;
+
+  &--sm {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  &--xl {
+    margin-bottom: 32px;
+    font-size: 72px;
+    line-height: 80px;
+  }
+}
+
+.text-spacer {
+  margin-bottom: 30px;
 }
