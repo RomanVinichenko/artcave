@@ -21,7 +21,7 @@ const browsersync = () => {
 const watching = () => {
     watch(['app/*.html']).on('change', browserSync.reload);
     watch(['app/scss/**/*.scss'], styles);
-    watch(['!app/js/main.js', '!app/js/faq.js', '!app/js/terms.js'], scripts);
+    watch(['!app/js/main.js', '!app/js/faq.js', '!app/js/catalog.js'], scripts);
 };
 
 const styles = () => {
@@ -41,7 +41,7 @@ const styles = () => {
 };
 
 const scripts = () => {
-    return src(['app/js/main.js', 'app/js/faq.js', 'app/js/terms.js'])
+    return src(['app/js/main.js', 'app/js/faq.js', 'app/js/catalog.js'])
         .pipe(dest('app/js'))
         .pipe(browserSync.stream());
 };
