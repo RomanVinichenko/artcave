@@ -1,3 +1,51 @@
+.major {
+  padding: 80px 0 110px;
+
+  &__title {
+    margin-bottom: 32px;
+    text-align: left;
+  }
+
+  &__subtitle {
+    margin-bottom: 40px;
+    max-width: 329px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  &__buttons {
+    display: flex;
+    margin-bottom: 40px;
+
+    a:first-child {
+      margin-right: 24px;
+    }
+  }
+
+  &__info {
+    max-width: 456px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__scroll {
+    padding: 17px 0 17px 72px;
+    border: none;
+    font-size: 14px;
+    line-height: 22px;
+    color: $gray-medium;
+    background-image: url("../images/scroll-down.svg");
+    background-position: center left;
+    background-size: 56px;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    cursor: pointer;
+  }
+}
+
 .advantages {
   padding: 160px 0;
   background-color: $pink-2;

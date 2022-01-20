@@ -40,25 +40,48 @@ body {
   font-size: 14px;
   line-height: 22px;
   color: $white;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, color 0.3s, border 0.3s;
   cursor: pointer;
-}
 
-.button__primary {
-  background-color: $primary;
+  &__primary {
+    background-color: $primary;
 
-  &:focus {
-    background-color: #b429e9;
+    &:focus {
+      background-color: #b429e9;
+    }
+
+    &:hover {
+      background-color: #c441f5;
+    }
+
+    &:disabled {
+      color: $gray-dark;
+      background-color: $gray-light;
+      cursor: url("../images/disabled.svg"), auto;
+    }
   }
 
-  &:hover {
-    background-color: #c441f5;
-  }
+  &__outline {
+    border: 1px solid $secondary;
+    color: $secondary;
+    background-color: transparent;
 
-  &:disabled {
-    color: $gray-dark;
-    background-color: $gray-light;
-    cursor: url("../images/disabled.svg"), auto;
+    &:focus {
+      color: $white;
+      background-color: #5a6ef2;
+    }
+
+    &:hover {
+      color: $white;
+      background-color: $secondary;
+    }
+
+    &:disabled {
+      border: 1px solid $gray-light;
+      color: $gray-dark;
+      background-color: $gray-light;
+      cursor: url("../images/disabled.svg"), auto;
+    }
   }
 }
 
