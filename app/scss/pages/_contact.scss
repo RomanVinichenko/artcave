@@ -1,0 +1,38 @@
+.contact {
+  padding: 120px 0;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__info {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+  }
+
+  &__mail {
+    margin-bottom: 24px;
+    background-image: url("../images/contact-mail.svg");
+  }
+
+  &__tel {
+    margin-bottom: 48px;
+    background-image: url("../images/contact-tel.svg");
+  }
+
+  &__text {
+    margin-bottom: 24px;
+    color: #1e2949;
+  }
+
+  &__mail,
+  &__tel {
+    display: block;
+    padding: 12px 0 12px 64px;
+    color: #1e2949;
+    background-position: center left;
+    background-size: 48px;
+    background-repeat: no-repeat;
+  }
+}
