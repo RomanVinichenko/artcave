@@ -7,9 +7,9 @@
 
   &__item {
     position: relative;
-    padding: 32px 0;
+    padding: 32px 0 8px;
     border-bottom: 1px solid $gray-medium;
-    transition: padding 0.3s;
+    transition: all 0.3s;
     cursor: pointer;
 
     &::after {
@@ -27,6 +27,7 @@
       padding: 24px 0;
 
       &::after {
+        top: 24px;
         transform: rotate(180deg) !important;
       }
     }
@@ -42,12 +43,17 @@
   }
 
   &__text {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s;
   }
 
   &__item--active {
     .faq__text {
-      display: block;
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(-5px);
     }
 
     .faq__name {
