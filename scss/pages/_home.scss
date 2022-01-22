@@ -44,6 +44,98 @@
     background-color: transparent;
     cursor: pointer;
   }
+
+  &__item {
+    position: relative;
+    width: 272px;
+    height: 272px;
+    border-radius: 8px;
+
+    &:nth-child(-n+3) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__inner {
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
+    display: flex;
+    padding: 6px 8px 6px 22px;
+    border-radius: 8px;
+    background-color: $white;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 8px;
+      top: 50%;
+      width: 10px;
+      height: 16px;
+      background-image: url("../images/ether-small.svg");
+      transform: translateY(-50%);
+    }
+  }
+
+  &__price {
+    margin-left: 4px;
+    font-weight: 600;
+  }
+
+  &__type {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    padding: 14px 16px;
+    width: 100%;
+    border: 2px solid transparent;
+    border-image-source: linear-gradient(360deg, rgba(255, 255, 255, 0.59) -2.17%, rgba(255, 255, 255, 0) 62.56%);
+    border-image-slice: 1;
+    border-radius: 8px 8px 0 0;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    color: $white;
+    background: rgb(160, 160, 160);
+    backdrop-filter: blur(80px);
+  }
+
+  &__detail {
+    display: block;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  &__author-wrap {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    z-index: 10;
+  }
+
+  &__author {
+    width: 32px;
+    height: 32px;
+    border: 1px solid $gray-medium;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 880px;
+  }
+
+  &__price,
+  &__text {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 20px;
+    color: $black;
+  }
 }
 
 .advantages {
