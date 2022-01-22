@@ -114,7 +114,6 @@
     color: $black;
     background-color: transparent;
     transition: color 0.2s;
-    cursor: pointer;
 
     &::after {
       content: "";
@@ -135,6 +134,7 @@
 
     &:hover {
       color: $secondary;
+      cursor: pointer;
 
       &::after {
         background-color: $secondary;
@@ -183,18 +183,43 @@
       &::before {
         transform: rotate(0);
       }
-    }
-  }
 
-  &__button--active {
-    .catalog__list {
-      display: none;
+      .catalog__list {
+        display: flex;
+      }
     }
   }
 
   &__list {
-    display: flex;
+    position: absolute;
+    top: 31px;
+    z-index: 10;
+    display: none;
     flex-direction: column;
+    padding: 16px;
+    width: 100%;
+    border-radius: 8px;
+    background-color: $pink-light;
+    transition: box-shadow 0.2s;
+
+    &:hover {
+      box-shadow: 0 0 32px $gray-light;
+      cursor: auto;
+    }
+  }
+
+  &__list--item {
+    color: $black;
+    transition: color 0.2s;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+
+    &:hover {
+      color: $secondary;
+    }
   }
 
   &__collection,
