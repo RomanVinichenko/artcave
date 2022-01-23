@@ -203,6 +203,16 @@ body {
     font-size: 72px;
     line-height: 80px;
   }
+
+  @include r($xl) {
+    font-size: 44px;
+    line-height: 52px;
+  }
+
+  @include r($lg) {
+    font-size: 40px;
+    line-height: 48px;
+  }
 }
 
 .text-spacer {

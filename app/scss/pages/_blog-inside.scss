@@ -23,12 +23,9 @@
   }
 
   &__img {
+    min-height: 344px;
     border-radius: 16px;
     object-fit: cover;
-
-    @include r($md) {
-      min-height: 200px;
-    }
   }
 
   &__img-wrapper {
@@ -42,19 +39,26 @@
   &__title {
     margin-bottom: 32px;
     text-align: left;
+
+    @include r($lg) {
+      margin-bottom: 16px;
+      font-size: 32px;
+      line-height: 40px;
+    }
   }
 
   &__date {
     display: inline-block;
     margin-bottom: 40px;
-    padding: 8px 0;
-    padding-left: 48px;
+    padding: 8px 0 8px 48px;
     background-image: url("../images/calendar40.svg");
     background-size: 40px;
     cursor: pointer;
 
     @include r($lg) {
-      margin-bottom: 24px;
+      margin-bottom: 16px;
+      padding: 0 0 0 32px;
+      background-size: 24px;
     }
   }
 
@@ -63,16 +67,20 @@
     background-position: center left;
     background-repeat: no-repeat;
   }
+
+  @include r($xxl) {
+    padding: 80px 0;
+  }
+
+  @include r($lg) {
+    padding: 40px 0;
+  }
 }
 
 .text-block {
   &__item {
     &:not(:last-child) {
       margin-bottom: 40px;
-
-      @include r($lg) {
-        margin-bottom: 32px;
-      }
     }
   }
 
@@ -101,10 +109,7 @@
   background-color: $pink-2;
 
   &__list {
-    position: relative;
-    display: flex;
-    margin-right: -293px;
-    max-height: 650px;
+    margin: 0 -16px;
   }
 
   &__box {
@@ -112,7 +117,15 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 28px;
-    padding-right: 144px;
+    padding-right: 164px;
+
+    @include r($xl) {
+      margin-bottom: 4px;
+    }
+
+    @include r($md) {
+      padding-right: 0;
+    }
   }
 
   h2 {
@@ -171,27 +184,50 @@
     &:hover {
       background-color: $pink-2;
     }
+
+    @include r($xl) {
+      top: -52px;
+    }
+
+    @include r($md) {
+      top: 530px;
+    }
   }
 
   .slick-prev {
-    right: 364px;
+    right: 88px;
     background-image: url("../images/slick-left.svg");
+
+    @include r($md) {
+      right: 50%;
+    }
   }
 
   .slick-next {
-    right: 293px;
+    right: 16px;
     background-image: url("../images/slick-right.svg");
+
+    @include r($md) {
+      right: 40%;
+    }
   }
 
-  .slick-list {
-    margin-left: -20px;
+  @include r($xxl) {
+    padding: 80px 0;
+  }
+
+  @include r($lg) {
+    padding: 40px 0;
+  }
+
+  @include r($md) {
+    padding: 40px 0 112px;
   }
 }
 
 .article {
-  margin: 20px 0;
+  margin: 20px 16px;
   padding: 24px;
-  width: 424px !important;
   border: 1px solid $gray-medium;
   border-radius: 8px;
   background-color: $pink-light;
@@ -199,9 +235,13 @@
   cursor: pointer;
 
   &__img {
-    max-width: 376px;
+    width: 100%;
     border-radius: 8px;
     object-fit: cover;
+
+    @include r($extra-custom) {
+      max-height: 300px;
+    }
   }
 
   &__img-wrap {
@@ -213,6 +253,10 @@
     font-size: 20px;
     line-height: 28px;
     color: $black;
+
+    @include r($xl) {
+      font-size: 18px;
+    }
   }
 
   &__date {
@@ -233,14 +277,19 @@
       font-size: 20px;
       line-height: 28px;
       color: $gray-black;
-    }
-  }
 
-  &:not(:last-child) {
-    margin-right: 32px;
+      @include r($xl) {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
   }
 
   &:hover {
     box-shadow: 0 1px 30px rgba(0, 0, 0, 0.001), 0 1px 15px rgba(0, 0, 0, 0.18);
+  }
+
+  @include r($xl) {
+    padding: 16px;
   }
 }
