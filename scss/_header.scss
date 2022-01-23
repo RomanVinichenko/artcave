@@ -2,4 +2,45 @@
   border-bottom: 1px solid $gray-light;
   background-color: $pink-light;
   backdrop-filter: blur(80px);
+
+  .menu__list {
+    @include r($md) {
+      display: none;
+    }
+  }
+
+  .menu__button {
+    @include r($md) {
+      display: none;
+    }
+  }
+
+  .logo {
+    @include r($lg) {
+      max-width: 212px;
+    }
+
+    @include r($sm) {
+      margin-right: 10px;
+      max-width: 170px;
+    }
+  }
+
+  .button {
+    @include r($extra) {
+      padding: 0 15px;
+    }
+  }
+
+  .menu__item {
+    &:not(:last-child) {
+      @include r($extra) {
+        margin-right: 30px;
+      }
+
+      @include r($lg) {
+        margin-right: 25px;
+      }
+    }
+  }
 }
