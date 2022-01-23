@@ -8,28 +8,92 @@
     &__item {
       &::after {
         top: -38px;
+
+        @include r($md) {
+          display: none;
+        }
       }
+
+      &:not(:last-child) {
+        @include r($xl) {
+          margin-right: 26px;
+        }
+      }
+    }
+
+    .logo {
+      @include r($lg) {
+        max-width: 212px;
+      }
+
+      @include r($md) {
+        margin-bottom: 32px;
+        max-width: 100%;
+      }
+    }
+
+    &__list {
+      @include r($md) {
+        margin-bottom: 32px;
+      }
+    }
+
+    @include r($md) {
+      flex-direction: column;
+      padding: 40px 0 32px;
     }
   }
 
   &__top {
     border-top: 1px solid $gray-light;
     border-bottom: 1px solid $gray-light;
+
+    .container {
+      @include r($md) {
+        margin-right: 16px;
+        margin-left: 16px;
+        padding: 0;
+        border-top: 1px solid $gray-light;
+        border-bottom: 1px solid $gray-light;
+      }
+    }
+
+    @include r($md) {
+      border: none;
+    }
   }
 
   &__socials {
     display: flex;
+
+    @include r($xl) {
+      margin-bottom: 32px;
+    }
   }
 
   &__wrapper {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     padding: 24px 0;
+
+    @include r($xl) {
+      flex-direction: column;
+      padding: 32px 0 40px;
+    }
   }
 
   &__docs {
     display: flex;
+
+    @include r($xl) {
+      margin-bottom: 32px;
+    }
+
+    @include r($md) {
+      flex-direction: column;
+    }
   }
 
   &__social {
@@ -72,6 +136,18 @@
         height: 20px;
         background-color: $gray-light;
       }
+
+      @include r($md) {
+        margin: 0 0 24px;
+
+        &::after {
+          display: none;
+        }
+      }
+    }
+
+    @include r($md) {
+      text-align: center;
     }
   }
 
