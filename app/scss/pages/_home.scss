@@ -1,5 +1,6 @@
 .major {
-  padding: 80px 0 110px;
+  padding: 160px 0 112px;
+  height: 100vh;
 
   &__title {
     margin-bottom: 32px;
@@ -29,6 +30,10 @@
   &__wrapper {
     display: flex;
     justify-content: space-between;
+
+    @include r($md) {
+      flex-direction: column;
+    }
   }
 
   &__scroll {
@@ -162,11 +167,19 @@
   &__list {
     display: flex;
     justify-content: space-between;
+
+    @include r($xxl) {
+      flex-wrap: wrap;
+    }
+
+    @include r($lg) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__item {
-    padding: 0 10px;
-    padding-top: 88px;
+    padding: 88px 10px 0;
     max-width: 342px;
     text-align: center;
     background-image: url("../images/decor-adv.svg");
@@ -177,6 +190,20 @@
     p {
       margin: 0 auto;
     }
+
+    @include r($xxl) {
+      width: 50%;
+      max-width: 100%;
+
+      &:nth-child(-n+2) {
+        margin-bottom: 24px;
+      }
+    }
+
+    @include r($lg) {
+      width: 100%;
+      max-width: 100%;
+    }
   }
 
   &__name {
@@ -185,6 +212,14 @@
     font-size: 24px;
     line-height: 32px;
     color: $black;
+  }
+
+  @include r($xxl) {
+    padding: 80px 0;
+  }
+
+  @include r($lg) {
+    padding: 40px 0;
   }
 }
 
@@ -196,6 +231,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    @include r($extra) {
+      justify-content: space-around;
+    }
   }
 
   &__title {
@@ -242,19 +281,21 @@
       backdrop-filter: blur(80px);
     }
   }
+
+  @include r($xxl) {
+    padding: 80px 0;
+  }
+
+  @include r($lg) {
+    padding: 40px 0;
+  }
 }
 
 .nft {
   background-color: $pink-2;
 
-  &__items {
-    flex-wrap: nowrap;
-    justify-content: center;
-  }
-
   &__item {
-    margin: 20px 0;
-    width: 424px !important;
+    margin: 20px 16px;
     transition: box-shadow 0.3s;
 
     &:not(:last-child) {
