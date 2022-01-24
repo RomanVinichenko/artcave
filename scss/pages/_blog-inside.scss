@@ -113,11 +113,12 @@
   }
 
   &__box {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 28px;
-    padding-right: 164px;
+    padding-right: 148px;
 
     @include r($xl) {
       margin-bottom: 4px;
@@ -133,7 +134,8 @@
   }
 
   &__button {
-    position: relative;
+    position: absolute;
+    right: 142px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -161,6 +163,11 @@
     &:hover {
       color: $white;
       background-color: $secondary;
+    }
+
+    @include r($md) {
+      right: 60%;
+      top: 582px;
     }
   }
 
@@ -199,7 +206,7 @@
     background-image: url("../images/slick-left.svg");
 
     @include r($md) {
-      right: 50%;
+      right: 47%;
     }
   }
 
@@ -208,7 +215,7 @@
     background-image: url("../images/slick-right.svg");
 
     @include r($md) {
-      right: 40%;
+      right: 34%;
     }
   }
 
