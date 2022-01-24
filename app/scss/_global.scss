@@ -205,11 +205,13 @@ body {
   }
 
   @include r($xl) {
+    margin-bottom: 48px;
     font-size: 44px;
     line-height: 52px;
   }
 
   @include r($lg) {
+    margin-bottom: 32px;
     font-size: 40px;
     line-height: 48px;
   }
