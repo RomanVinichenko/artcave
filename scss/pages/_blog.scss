@@ -27,15 +27,22 @@
       background-image: linear-gradient(262.98deg, rgba(0, 0, 0, 0) 0%, rgba(30, 41, 73, 0.64) 100%);
     }
 
-    @include r($md) {
+    @include r($xl) {
+      min-height: 344px;
+    }
+
+    @include r($lg) {
       margin-bottom: 16px;
       padding: 16px;
-      min-height: 344px;
     }
   }
 
   &__content {
     max-width: 680px;
+
+    p {
+      @include text-clamp;
+    }
 
     @include r($md) {
       max-width: 100%;
@@ -51,7 +58,7 @@
     background-size: 24px;
     background-repeat: no-repeat;
 
-    @include r($md) {
+    @include r($lg) {
       margin-bottom: 8px;
     }
   }
@@ -63,13 +70,9 @@
     line-height: 56px;
 
     @include r($lg) {
-      font-size: 30px;
-      line-height: 38px;
-    }
-
-    @include r($md) {
-      font-size: 16px;
-      line-height: 24px;
+      margin-bottom: 8px;
+      font-size: 32px;
+      line-height: 40px;
     }
   }
 
@@ -99,6 +102,10 @@
         }
       }
     }
+
+    @include r($lg) {
+      margin-top: 8px;
+    }
   }
 
   &__arrow {
@@ -112,6 +119,10 @@
     .blog__story {
       &:not(:last-child) {
         margin-right: 32px;
+
+        @include r($lg) {
+          margin-right: 0;
+        }
       }
     }
 
@@ -123,6 +134,11 @@
   &__naming--small {
     font-size: 40px;
     line-height: 48px;
+
+    @include r($lg) {
+      font-size: 32px;
+      line-height: 40px;
+    }
   }
 
   &__pagination {
@@ -134,6 +150,10 @@
       border: 1px solid transparent;
       color: $white;
       background-color: $secondary;
+    }
+
+    @include r($lg) {
+      margin-top: 16px;
     }
   }
 
@@ -153,10 +173,6 @@
 
     &:not(:last-child) {
       margin-right: 8px;
-
-      @include r($md) {
-        margin-right: 16px;
-      }
     }
 
     &:hover {
@@ -164,6 +180,19 @@
       color: $white;
       background-color: $secondary;
     }
+
+    @include r($md) {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  @include r($xxl) {
+    padding-top: 80px;
+  }
+
+  @include r($lg) {
+    padding-top: 40px;
   }
 }
 
@@ -174,6 +203,18 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    @include r($extra) {
+      justify-content: space-around;
+    }
+  }
+
+  @include r($xxl) {
+    padding-bottom: 80px;
+  }
+
+  @include r($lg) {
+    padding-bottom: 40px;
   }
 }
 
@@ -189,7 +230,21 @@
 
   &__img {
     margin-bottom: 24px;
+    width: 100%;
     border-radius: 8px;
+    object-fit: cover;
+
+    @include r($lg) {
+      margin-bottom: 16px;
+    }
+
+    @include r($md) {
+      max-height: 440px;
+    }
+
+    @include r($sm) {
+      max-height: 312px;
+    }
   }
 
   &__content {
@@ -202,6 +257,11 @@
     font-size: 20px;
     line-height: 28px;
     color: $black;
+
+    @include r($lg) {
+      font-size: 18px;
+      line-height: 28px;
+    }
   }
 
   &__date {
@@ -218,6 +278,20 @@
   p {
     font-size: 20px;
     line-height: 28px;
-    color: $gray-black;
+
+    @include r($lg) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  @include r($lg) {
+    margin-bottom: 16px;
+    padding: 16px;
+    max-width: 450px;
+  }
+
+  @include r($md) {
+    max-width: 100%;
   }
 }
