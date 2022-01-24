@@ -208,6 +208,12 @@ body {
     margin-bottom: 48px;
     font-size: 44px;
     line-height: 52px;
+
+    .title--xl {
+      margin-bottom: 16px;
+      font-size: 56px;
+      line-height: 64px;
+    }
   }
 
   @include r($lg) {
@@ -219,4 +225,8 @@ body {
 
 .text-spacer {
   margin-bottom: 30px;
+
+  @include r($lg) {
+    margin-bottom: 20px;
+  }
 }

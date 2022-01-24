@@ -5,6 +5,11 @@
   .container {
     display: flex;
     justify-content: space-between;
+
+    @include r($lg) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__information {
@@ -12,11 +17,31 @@
 
     p {
       margin-bottom: 40px;
+
+      @include r($xxl) {
+        margin-bottom: 24px;
+      }
+    }
+
+    @include r($lg) {
+      max-width: 100%;
     }
   }
 
   &__img-wrap {
     max-width: 730px;
+
+    @include r($extra) {
+      max-width: 600px;
+    }
+
+    @include r($xxl) {
+      max-width: 500px;
+    }
+
+    @include r($lg) {
+      margin-bottom: 32px;
+    }
   }
 
   &__img {
@@ -27,12 +52,25 @@
   &__title {
     margin-bottom: 40px;
     text-align: left;
+
+    @include r($xxl) {
+      margin-bottom: 24px;
+    }
+
+    @include r($lg) {
+      font-size: 32px;
+      line-height: 40px;
+    }
   }
 
   &__author-inner {
     margin-bottom: 40px;
     font-size: 14px;
     line-height: 22px;
+
+    @include r($xxl) {
+      margin-bottom: 24px;
+    }
   }
 
   &__author {
@@ -51,6 +89,10 @@
   &__labels {
     display: flex;
     margin-bottom: 40px;
+
+    @include r($xxl) {
+      margin-bottom: 24px;
+    }
   }
 
   &__label {
@@ -74,12 +116,23 @@
     background-position: center left;
     background-size: 20px;
     background-repeat: no-repeat;
+
+    @include r($sm) {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      background-position: top left;
+    }
   }
 
   &__price-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include r($sm) {
+      margin-bottom: 16px;
+    }
   }
 
   &__price-text {
@@ -92,5 +145,13 @@
     font-size: 24px;
     line-height: 32px;
     color: $black;
+  }
+
+  @include r($xxl) {
+    padding: 80px 0;
+  }
+
+  @include r($lg) {
+    padding: 40px 0;
   }
 }

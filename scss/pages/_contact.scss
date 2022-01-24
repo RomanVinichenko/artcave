@@ -1,9 +1,20 @@
 .contact {
   padding: 120px 0;
 
+  .footer__socials {
+    @include r($md) {
+      justify-content: center;
+      margin-bottom: 48px;
+    }
+  }
+
   &__wrapper {
     display: flex;
     justify-content: space-between;
+
+    @include r($md) {
+      flex-direction: column;
+    }
   }
 
   &__info {
@@ -14,16 +25,30 @@
   &__mail {
     margin-bottom: 24px;
     background-image: url("../images/contact-mail.svg");
+
+    @include r($md) {
+      margin: 0 auto 24px;
+      max-width: 275px;
+    }
   }
 
   &__tel {
     margin-bottom: 48px;
     background-image: url("../images/contact-tel.svg");
+
+    @include r($md) {
+      margin: 0 auto 32px;
+      max-width: 275px;
+    }
   }
 
   &__text {
     margin-bottom: 24px;
     color: #1e2949;
+
+    @include r($md) {
+      text-align: center;
+    }
   }
 
   // Form
@@ -121,5 +146,13 @@
     line-height: 22px;
     color: $black;
     background-color: $pink-light;
+  }
+
+  @include r($xxl) {
+    padding: 80px 0;
+  }
+
+  @include r($lg) {
+    padding: 40px 0;
   }
 }
