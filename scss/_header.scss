@@ -6,6 +6,7 @@
   z-index: 20;
   border-bottom: 1px solid $gray-light;
   background-color: $pink-light;
+  transition: all 0.2s;
   backdrop-filter: blur(80px);
 
   .menu__list {
@@ -46,6 +47,24 @@
       @include r($lg) {
         margin-right: 25px;
       }
+    }
+  }
+
+  &--active {
+    .menu {
+      padding: 8px 0;
+    }
+
+    .logo {
+      max-width: 200px;
+    }
+
+    .menu__search {
+      height: 44px;
+    }
+
+    .button {
+      min-height: 44px;
     }
   }
 }

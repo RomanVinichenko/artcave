@@ -1,4 +1,11 @@
 $(function () {
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 50) {
+            $('.header').addClass('header--active');
+        } else {
+            $('.header').removeClass('header--active');
+        }
+    });
     $('.articles__list').slick({
         loop: true,
         infinite: true,
@@ -29,12 +36,6 @@ $(function () {
             }
         ]
     });
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 50) {
-            $('.header').addClass('header--active');
-        } else {
-            $('.header').removeClass('header--active');
-        }
-    });
+
 });
 
