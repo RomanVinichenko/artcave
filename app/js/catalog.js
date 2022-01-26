@@ -9,4 +9,5 @@ $(function () {
         dots: true,
         arrows: true,
     });
+
 });
