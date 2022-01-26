@@ -69,11 +69,11 @@
   }
 
   @include r($xxl) {
-    padding: 80px 0;
+    padding: 100px 0 80px;
   }
 
   @include r($lg) {
-    padding: 40px 0;
+    padding: 100px 0 40px;
   }
 }
 
@@ -107,6 +107,12 @@
   padding: 160px 0;
   overflow: hidden;
   background-color: $pink-2;
+  p {
+    @include r($sm) {
+     @include text-clamp;
+      -webkit-line-clamp: 2;
+    }
+  }
 
   &__list {
     margin: 0 -16px;
@@ -166,8 +172,11 @@
     }
 
     @include r($md) {
-      right: 60%;
-      top: 582px;
+      right: 52%;
+      top: 595px;
+    }
+    @include r($sm) {
+      right: 54%;
     }
   }
 
@@ -197,7 +206,7 @@
     }
 
     @include r($md) {
-      top: 530px;
+      top: 543px;
     }
   }
 
@@ -206,7 +215,10 @@
     background-image: url("../images/slick-left.svg");
 
     @include r($md) {
-      right: 47%;
+      right: 39%;
+    }
+    @include r($sm) {
+      right: 36%;
     }
   }
 
@@ -215,7 +227,10 @@
     background-image: url("../images/slick-right.svg");
 
     @include r($md) {
-      right: 34%;
+      right: 27%;
+    }
+    @include r($sm) {
+      right: 20%;
     }
   }
 
@@ -224,7 +239,7 @@
   }
 
   @include r($lg) {
-    padding: 40px 0;
+    padding: 24px 0;
   }
 
   @include r($md) {
