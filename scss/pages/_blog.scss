@@ -199,7 +199,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-      margin: 0 -16px;
+    margin: 0 -16px;
 
     @include r($extra) {
       justify-content: space-around;
@@ -224,7 +224,6 @@
   border-radius: 8px;
   background-color: $pink-light;
   cursor: pointer;
-
 
   &__img {
     margin-bottom: 24px;

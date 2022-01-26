@@ -36,11 +36,11 @@
       }
 
       @include r($md) {
-        padding: 24px 40px 140px 0;
+        padding: 24px 40px 105px 0;
       }
 
       @include r($sm) {
-        padding: 24px 40px 150px 0;
+        padding: 24px 40px 140px 0;
       }
     }
   }
@@ -56,6 +56,16 @@
     @include r($lg) {
       font-size: 22px;
       line-height: 30px;
+    }
+
+    @include r($md) {
+      max-width: 500px;
+    }
+
+    @include r($sm) {
+      @include text-clamp;
+
+      -webkit-line-clamp: 3;
     }
   }
 
@@ -77,6 +87,12 @@
     @include r($md) {
       max-width: 100%;
     }
+
+    @include r($sm) {
+      @include text-clamp;
+
+      -webkit-line-clamp: 4;
+    }
   }
 
   &__item--active {
@@ -88,10 +104,10 @@
   }
 
   @include r($xxl) {
-    padding: 80px 0;
+    padding: 120px 0 80px;
   }
 
   @include r($lg) {
-    padding: 40px 0;
+    padding: 120px 0 40px;
   }
 }

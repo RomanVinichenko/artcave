@@ -107,9 +107,11 @@
   padding: 160px 0;
   overflow: hidden;
   background-color: $pink-2;
+
   p {
     @include r($sm) {
-     @include text-clamp;
+      @include text-clamp;
+
       -webkit-line-clamp: 2;
     }
   }
@@ -175,6 +177,7 @@
       right: 52%;
       top: 595px;
     }
+
     @include r($sm) {
       right: 54%;
     }
@@ -217,6 +220,7 @@
     @include r($md) {
       right: 39%;
     }
+
     @include r($sm) {
       right: 36%;
     }
@@ -229,6 +233,7 @@
     @include r($md) {
       right: 27%;
     }
+
     @include r($sm) {
       right: 20%;
     }
