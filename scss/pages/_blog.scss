@@ -188,11 +188,7 @@
   }
 
   @include r($xxl) {
-    padding-top: 80px;
-  }
-
-  @include r($lg) {
-    padding-top: 40px;
+    padding-top: 120px;
   }
 }
 
@@ -203,6 +199,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+      margin: 0 -16px;
 
     @include r($extra) {
       justify-content: space-around;
@@ -219,14 +216,15 @@
 }
 
 .post {
-  margin-bottom: 32px;
+  margin: 0 16px 32px;
   padding: 24px;
   width: 100%;
-  max-width: 475px;
+  max-width: 455px;
   border: 1px solid $gray-medium;
   border-radius: 8px;
   background-color: $pink-light;
   cursor: pointer;
+
 
   &__img {
     margin-bottom: 24px;
