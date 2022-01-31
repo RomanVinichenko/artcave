@@ -10,9 +10,30 @@
   backdrop-filter: blur(80px);
 
   .menu__list {
+    position: relative;
+
     @include r($md) {
-      display: none;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      z-index: 5;
+      flex-direction: column;
+      margin-top: 66px;
+      padding: 40px 16px 32px;
+      background-color: $pink-light;
+      transform: translateY(-200%);
+      transition: transform 0.3s;
     }
+
+    @include r($sm) {
+      margin-top: 58px;
+    }
+  }
+
+  .menu__list--active {
+    transform: translateY(0);
+    transition: transform 0.3s;
   }
 
   .menu__button {
@@ -47,18 +68,23 @@
       @include r($lg) {
         margin-right: 25px;
       }
+
+      @include r($md) {
+        margin: 0 0 32px;
+      }
+    }
+
+    @include r($md) {
+      font-size: 24px;
+      line-height: 32px;
+
+      &::after {
+        display: none;
+      }
     }
   }
 
   &--active {
-    .menu {
-      padding: 8px 0;
-    }
-
-    .logo {
-      max-width: 200px;
-    }
-
     .menu__search {
       height: 44px;
     }
