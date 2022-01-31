@@ -1,4 +1,16 @@
 $(function () {
+    $('.menu__burger').on('click', function() {
+        $('.menu__list').toggleClass('menu__list--active');
+    });
+    $('.logo').on('click', function() {
+        $('.menu__list').removeClass('menu__list--active');
+    });
+    $('main').on('click', function() {
+        $('.menu__list').removeClass('menu__list--active');
+    });
+    $('footer').on('click', function() {
+        $('.menu__list').removeClass('menu__list--active');
+    });
     $(window).scroll(function () {
         if ($(this).scrollTop() > 50) {
             $('.header').addClass('header--active');
