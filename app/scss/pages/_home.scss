@@ -429,31 +429,6 @@
   }
 }
 
-.nft {
-  background-color: $pink-2;
-
-  &__item {
-    margin: 20px 16px;
-    transition: box-shadow 0.3s;
-
-    &:not(:last-child) {
-      margin-right: 32px;
-    }
-
-    &:hover {
-      box-shadow: 0 1px 30px rgba(0, 0, 0, 0.001), 0 1px 15px rgba(0, 0, 0, 0.18);
-    }
-  }
-}
-
-.nft__items .slick-arrow {
-  background-color: $pink-2 !important;
-}
-
-.nft__items .slick-arrow:hover {
-  background-color: $pink-light !important;
-}
-
 .slick-arrow {
   position: absolute;
   top: -76px;
