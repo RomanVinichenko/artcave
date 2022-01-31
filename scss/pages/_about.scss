@@ -304,6 +304,39 @@
     min-height: 376px;
     max-width: 376px;
     font-weight: 600;
+
+    &:not(:last-child) {
+      margin-right: 28px;
+
+      @include r($xxl) {
+        margin: 0 10px;
+      }
+
+      @include r($xl) {
+        margin: 0 10px 24px;
+      }
+
+      @include r($lg) {
+        margin: 0 0 24px;
+      }
+    }
+
+    @include r($xxl) {
+      min-height: 344px;
+      max-width: 344px;
+    }
+
+    @include r($xxl) {
+      margin: 0 10px;
+    }
+
+    @include r($xl) {
+      margin: 0 10px 24px;
+    }
+
+    @include r($lg) {
+      margin: 0 0 24px;
+    }
   }
 
   &__wrap {
@@ -319,8 +352,8 @@
     background-color: $white;
 
     @include r($xxl) {
-      min-height: 272px;
-      max-width: 272px;
+      min-height: 270px;
+      max-width: 270px;
     }
 
     @include r($sm) {
@@ -343,8 +376,12 @@
     padding: 40px 0;
   }
 
+  @include r($xl) {
+    padding: 40px 0 16px;
+  }
+
   @include r($lg) {
-    padding: 20px 0;
+    padding: 20px 0 4px;
   }
 }
 
@@ -409,15 +446,15 @@
     line-height: 22px;
   }
 
-  @include r($lg) {
-    padding: 40px 0;
-  }
-
   @include r($xxl) {
     padding: 40px 0;
   }
 
   @include r($lg) {
+    padding: 20px 0 10px;
+  }
+
+  @include r($sm) {
     padding: 20px 0;
   }
 }
@@ -439,6 +476,26 @@
     min-height: 272px;
     max-width: 272px;
     font-weight: 500;
+
+    &:not(:last-child) {
+      margin-right: 32px;
+
+      @include r($xxl) {
+        margin: 0 15px 24px;
+      }
+
+      @include r($sm) {
+        margin: 0 0 24px;
+      }
+    }
+
+    @include r($xxl) {
+      margin: 0 15px 24px;
+    }
+
+    @include r($sm) {
+      margin: 0 0 24px;
+    }
   }
 
   &__wrap {
@@ -498,19 +555,11 @@
   }
 
   @include r($xxl) {
-    padding: 80px 0;
-  }
-
-  @include r($lg) {
     padding: 40px 0;
   }
 
-  @include r($xxl) {
-    padding: 40px 0 80px;
-  }
-
   @include r($lg) {
-    padding: 20px 0 40px;
+    padding: 20px 0 16px;
   }
 }
 
@@ -536,17 +585,5 @@
     z-index: -1;
     border-radius: 18px;
     background-image: linear-gradient(312.25deg, #ffc4bc 0%, rgba(255, 255, 255, 0) 66.19%);
-  }
-
-  &:not(:last-child) {
-    margin-right: 28px;
-
-    @include r($xxl) {
-      margin: 0 10px 24px;
-    }
-  }
-
-  @include r($xxl) {
-    margin: 0 10px 24px;
   }
 }
