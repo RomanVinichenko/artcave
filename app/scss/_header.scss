@@ -20,10 +20,22 @@
       z-index: 5;
       flex-direction: column;
       margin-top: 66px;
-      padding: 40px 16px 32px;
+      padding: 40px 16px 120px;
+      width: 100%;
       background-color: $pink-light;
       transform: translateY(-200%);
       transition: transform 0.3s;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0 16px;
+        height: 1px;
+        background-color: $gray-light;
+      }
     }
 
     @include r($sm) {
@@ -38,8 +50,17 @@
 
   .menu__button {
     @include r($md) {
-      display: none;
+      position: absolute;
+      bottom: -409px;
+      z-index: 7;
+      transform: translateX(-200%);
+      transition: transform 0.3s;
     }
+  }
+
+  .menu__button--active {
+    transform: translateX(0);
+    transition: transform 0.3s;
   }
 
   .logo {
@@ -71,6 +92,7 @@
 
       @include r($md) {
         margin: 0 0 32px;
+        max-width: 100%;
       }
     }
 
@@ -81,16 +103,6 @@
       &::after {
         display: none;
       }
-    }
-  }
-
-  &--active {
-    .menu__search {
-      height: 44px;
-    }
-
-    .button {
-      min-height: 44px;
     }
   }
 }
