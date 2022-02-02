@@ -1,6 +1,6 @@
 .contact {
   margin: 0 auto;
-  padding: 120px 0;
+  padding: 200px 0 120px;
   max-width: 1184px;
 
   .footer__socials {
@@ -64,11 +64,11 @@
   }
 
   @include r($xxl) {
-    padding: 80px 0;
+    padding: 120px 0 80px;
   }
 
   @include r($lg) {
-    padding: 40px 0;
+    padding: 120px 0 40px;
   }
 }
 
@@ -107,16 +107,51 @@
   }
 }
 
+.contact__label--checkbox {
+  margin-bottom: 32px;
+}
+
 .contact__span {
   position: absolute;
   left: 16px;
   top: 50%;
   font-size: 14px;
   line-height: 22px;
-  color: $gray-black;
   transform: translateY(-50%);
   transition: all 0.1s;
 }
+
+.contact__label--textarea {
+  .contact__span {
+    top: 25px;
+  }
+}
+
+.contact__label--select {
+  .contact__span {
+    left: 8px;
+    top: 0;
+    z-index: 5;
+    padding: 0 4px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: $black;
+    background-color: $pink-light;
+  }
+}
+
+//.contact__span--active {
+//  left: 8px;
+//  top: 0;
+//  z-index: 5;
+//  padding: 0 4px;
+//  font-weight: 500;
+//  font-size: 12px;
+//  line-height: 16px;
+//  color: $secondary;
+//  background-color: $pink-light;
+//}
 
 .contact__select,
 .contact__textarea,
@@ -136,5 +171,30 @@
 
   &:focus {
     border: 2px solid $secondary;
+  }
+}
+
+.contact__label--button {
+  margin-bottom: 0;
+}
+
+.contact__textarea {
+  min-height: 200px;
+  resize: none;
+}
+
+.contact__button {
+  width: 100%;
+  min-height: 56px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: $pink-light;
+  background-color: $primary;
+
+  &:hover {
+    background-color: #c441f5;
   }
 }
