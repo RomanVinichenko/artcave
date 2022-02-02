@@ -1,5 +1,5 @@
 .blog-inside {
-  padding: 120px 0 160px;
+  padding: 200px 0 160px;
 
   &__wrap {
     margin: 0 auto;
@@ -69,11 +69,11 @@
   }
 
   @include r($xxl) {
-    padding: 100px 0 80px;
+    padding: 120px 0 80px;
   }
 
   @include r($lg) {
-    padding: 100px 0 40px;
+    padding: 120px 0 40px;
   }
 }
 
