@@ -20,8 +20,14 @@
   }
 
   &__info {
+    margin-right: 20px;
+    min-width: 275px;
     font-family: "Poppins", sans-serif;
     font-weight: 500;
+
+    @include r($md) {
+      margin-right: 0;
+    }
   }
 
   &__mail {
@@ -80,6 +86,10 @@
   width: 100%;
   max-width: 576px;
   font-family: "Poppins", sans-serif;
+
+  @include r($md) {
+    max-width: 100%;
+  }
 }
 
 .contact__label {
@@ -111,6 +121,12 @@
   margin-bottom: 32px;
 }
 
+.contact__form-text {
+  font-size: 14px;
+  line-height: 22px;
+  color: $black;
+}
+
 .contact__span {
   position: absolute;
   left: 16px;
@@ -122,6 +138,8 @@
 }
 
 .contact__label--textarea {
+  margin-bottom: 32px;
+
   .contact__span {
     top: 25px;
   }
@@ -140,18 +158,6 @@
     background-color: $pink-light;
   }
 }
-
-//.contact__span--active {
-//  left: 8px;
-//  top: 0;
-//  z-index: 5;
-//  padding: 0 4px;
-//  font-weight: 500;
-//  font-size: 12px;
-//  line-height: 16px;
-//  color: $secondary;
-//  background-color: $pink-light;
-//}
 
 .contact__select,
 .contact__textarea,
