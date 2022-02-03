@@ -3,10 +3,10 @@
   background-color: $pink-light;
 
   &__item {
-    margin: 20px 16px;
+    margin-bottom: 32px;
     padding: 24px;
     width: 100%;
-    max-width: 455px;
+    max-width: 475px;
     border: 1px solid $gray-light;
     border-radius: 8px;
     background-color: $pink-light;
@@ -15,6 +15,12 @@
     @include r($xl) {
       padding: 16px;
     }
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   &__img-wrap {
@@ -31,10 +37,6 @@
     width: 100%;
     border-radius: 8px;
     object-fit: cover;
-
-    @include r($extra-custom) {
-      max-height: 300px;
-    }
   }
 
   &__info {
