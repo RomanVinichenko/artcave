@@ -230,3 +230,9 @@ body {
     margin-bottom: 20px;
   }
 }
+
+.nft__img {
+  @include r($extra-custom) {
+    max-height: 300px;
+  }
+}
